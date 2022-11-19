@@ -64,6 +64,13 @@ omit = [
     "*/__main__.py",
 ]
 
+[tool.flake8]
+max-line-length = 120
+max-complexity = 42
+ignore = ["E203", "W503"]
+inline-quotes = "single"
+multiline-quotes = "double double double"
+
 [tool.isort]
 line_length = 120
 known_first_party = "kiertotie"
