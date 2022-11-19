@@ -1,9 +1,9 @@
 import argparse
 import gettext
 
-de = gettext.translation('base', localedir='locale', languages=['de'])
-de.install()
-_ = de.gettext  # German
+lang = gettext.translation('messages', localedir='locale', languages=['de_DE'])
+lang.install()
+_ = lang.gettext  # German
 
 
 def verify(options: argparse.Namespace) -> int:
