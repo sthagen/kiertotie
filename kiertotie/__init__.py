@@ -1,5 +1,6 @@
 """Detour (Finnish: kiertotie) per rsync proxy to https mirror node."""
 import datetime as dti
+import json
 import logging
 import os
 import pathlib
@@ -75,6 +76,7 @@ __all__: List[str] = [
     'HTTP_404_BYTES_TOKEN',
     'HTTP_404_BYTES_TOKEN_LENGTH',
     'ProxyType',
+    'load',
     'log',
 ]
 
@@ -100,6 +102,13 @@ def init_logger(name=None, level=None):
     logging.basicConfig(**log_format)
     log = logging.getLogger(APP_ENV if name is None else name)
     log.propagate = True
+
+
+def load(data_path: str | pathlib.Path) -> ProxyType:
+    """Load the data from JSON."""
+    with open(data_path, 'rt', encoding=ENCODING) as handle:
+        data: ProxyType = json.load(handle)
+    return data
 
 
 init_logger(name=APP_ENV, level=logging.DEBUG if DEBUG else None)
