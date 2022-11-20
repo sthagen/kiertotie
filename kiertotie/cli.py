@@ -42,6 +42,22 @@ def parse_request(argv: List[str]) -> Union[int, argparse.Namespace]:
         default=None,
         help='absolute anchor path (webroot) below which we mirror',
     )
+    parser.add_argument(
+        '--span-tree',
+        '-s',
+        dest='span_folder_tree',
+        default=False,
+        action='store_true',
+        help='span the folder tree from proxy data',
+    )
+    parser.add_argument(
+        '--verbose',
+        '-v',
+        dest='verbose',
+        default=False,
+        action='store_true',
+        help='be verbose in logging and write status info to shell scripts',
+    )
     if not argv:
         parser.print_help()
         return 0
