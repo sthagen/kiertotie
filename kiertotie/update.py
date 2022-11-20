@@ -1,6 +1,5 @@
 """Prepare entry and gone transactions from comparing local hierarchy with proxy data."""
 import datetime as dti
-import json
 import pathlib
 import random
 
@@ -20,18 +19,11 @@ from kiertotie import (
     TS_FORMAT,
     URL_ENC_SP,
     EntryType,
-    ProxyType,
+    load,
     log,
 )
 
 DEFAULT_SCRIPT = 'update.sh'
-
-
-def load(data_path: str | pathlib.Path) -> ProxyType:
-    """Load the data from JSON."""
-    with open(data_path, 'rt', encoding=ENCODING) as handle:
-        data: ProxyType = json.load(handle)
-    return data
 
 
 def shell(path: str | pathlib.Path, commands: list[str]) -> None:
@@ -41,7 +33,11 @@ def shell(path: str | pathlib.Path, commands: list[str]) -> None:
 
 
 def assess_files(
-    upstreams: list[EntryType], anchor: pathlib.Path, root_folder: pathlib.Path, commands: list[str]
+    upstreams: list[EntryType],
+    anchor: pathlib.Path,
+    root_folder: pathlib.Path,
+    commands: list[str],
+    verbose: bool = False,
 ) -> list[EntryType]:
     """DRY."""
     updates = []
@@ -52,21 +48,24 @@ def assess_files(
         path = pathlib.Path(str(entry_path))
 
         if not (anchor / root_folder / path.parent).is_dir():
-            commands.append(f'# - New file {root_folder}/{path} in new folder')
+            if verbose:
+                commands.append(f'# - New file {root_folder}/{path} in new folder')
             updates.append(entry)
             continue
 
         if not (anchor / root_folder / path).is_file():
-            commands.append(f'# - New file {root_folder}/{path} in existing folder')
+            if verbose:
+                commands.append(f'# - New file {root_folder}/{path} in existing folder')
             updates.append(entry)
             continue
 
         stat_found = (anchor / root_folder / path).stat()
         size_bytes_found = stat_found.st_size
-        log.info(f'local path ({root_folder / path}) pointing to {size_bytes_found} bytes is interesting ...')
-        commands.append(
-            f'# ... Local path {root_folder / path} pointing to {size_bytes_found} bytes is interesting ...'
-        )
+        log.debug(f'local path ({root_folder / path}) pointing to {size_bytes_found} bytes is interesting ...')
+        if verbose:
+            commands.append(
+                f'# ... Local path {root_folder / path} pointing to {size_bytes_found} bytes is interesting ...'
+            )
         sampled_bytes = b''
         removed_http_404 = False
         if size_bytes_found == HTTP_404_SIZE_BYTES:
@@ -92,7 +91,8 @@ def assess_files(
         size_bytes_upstream = entry['size']
         if size_bytes_found == size_bytes_upstream:
             if path.name not in ('timestamp.tx', 'timestamp.txt', 'md5sums.txt'):
-                commands.append(f'# - Skipping same size file {root_folder}/{path} in existing folder')
+                if verbose:
+                    commands.append(f'# - Skipping same size file {root_folder}/{path} in existing folder')
                 continue
             commands.append(f'# - Overwriting same size file {root_folder}/{path} in existing folder')
         elif removed_http_404:
@@ -101,10 +101,11 @@ def assess_files(
                 f' from upstream in existing folder'
             )
         else:
-            commands.append(
-                f'# - Different size file {root_folder}/{path} with {size_bytes_found}'
-                f' instead {size_bytes_upstream} bytes upstream in existing folder'
-            )
+            if verbose:
+                commands.append(
+                    f'# - Different size file {root_folder}/{path} with {size_bytes_found}'
+                    f' instead {size_bytes_upstream} bytes upstream in existing folder'
+                )
         updates.append(entry)
 
     return updates
@@ -114,23 +115,24 @@ def process(
     proxy_data_path: str | pathlib.Path,
     anchor_path: str | pathlib.Path | None = None,
     script_path: str | pathlib.Path | None = None,
+    verbose: bool = False,
 ) -> int:
     """Generate folder tree below current working directory according to proxy data."""
     anchor = pathlib.Path.cwd() if anchor_path is None else pathlib.Path(anchor_path)
-    log.info(f'assumung anchor as ({anchor})')
+    log.debug(f'assuming anchor as ({anchor}) in process update')
 
     store_path = pathlib.Path(proxy_data_path)
-    log.info(f'loading proxy data from ({store_path})')
+    log.debug(f'loading proxy data from ({store_path}) in process update')
     repo = load(store_path)
 
     root_folder_str = store_path.name.split(DASH)[1]
     if root_folder_str == 'development':
         root_folder_str += '_releases'
     root_folder = pathlib.Path(root_folder_str)
-    log.info(f'assumung root folder as ({root_folder}) below anchor ({anchor})')
+    log.debug(f'assuming root folder as ({root_folder}) below anchor ({anchor}) in process update')
 
     script_path = pathlib.Path(DEFAULT_SCRIPT) if script_path is None else pathlib.Path(script_path)
-    log.info(f'creating shell script at ({script_path})')
+    log.debug(f'creating shell script at ({script_path})')
 
     actions = ['#! /usr/bin/env bash']
     actions.append(f'# Derived root folder to be ({root_folder}) below anchor ({anchor})')
@@ -164,12 +166,14 @@ def process(
             maybe_enter.discard(local_name)
     gone_count = len(possibly_gone)
     actions.append(f"# * found {gone_count} gone storage folder{'' if gone_count == 1 else 's'} below {anchor}:")
-    for f in sorted(possibly_gone):
-        actions.append(f'#  - {root_folder}/{f}')
+    if verbose:
+        for f in sorted(possibly_gone):
+            actions.append(f'#  - {root_folder}/{f}')
     enter_count = len(maybe_enter)
     actions.append(f"# * found {enter_count} enter folder{'' if gone_count == 1 else 's'} below {anchor}:")
-    for f in sorted(maybe_enter):  # type: ignore
-        actions.append(f'#  + {root_folder}/{f} from {upstream_folder_born[f]}')
+    if verbose:
+        for f in sorted(maybe_enter):  # type: ignore
+            actions.append(f'#  + {root_folder}/{f} from {upstream_folder_born[f]}')
 
     candidate_count = repo['count_files']
     actions.append(
@@ -178,7 +182,11 @@ def process(
     )
 
     updates = assess_files(
-        repo['tree']['files'], anchor=anchor, root_folder=root_folder, commands=actions  # type: ignore
+        repo['tree']['files'],  # type: ignore
+        anchor=anchor,
+        root_folder=root_folder,
+        commands=actions,
+        verbose=verbose,
     )
 
     transfers = len(updates)
@@ -221,6 +229,7 @@ def process(
     actions.append('echo OK')
     actions.append('')  # Final newline at end of fetch script
 
-    log.info(f'created shell script with {len(actions) - 1} lines at ({script_path})')
+    shell(script_path, actions)
+    log.debug(f'created shell script with {len(actions) - 1} lines at ({script_path}) from process update')
 
     return 0
