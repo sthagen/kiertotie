@@ -58,7 +58,8 @@ TS_FORMAT_LOG = '%Y-%m-%dT%H:%M:%S'
 TS_FORMAT_PAYLOADS = '%Y-%m-%d %H:%M:%S.%f UTC'
 
 EntryType = dict[str, int | str]
-ProxyType = dict[str, int | dict[str, list[EntryType]]]
+DimensionType = dict[str, list[EntryType]]
+ProxyType = dict[str, int | DimensionType]
 
 __all__: List[str] = [
     'BASE_URL',
