@@ -19,6 +19,30 @@ DEBUG = bool(os.getenv(f'{APP_ENV}_DEBUG', ''))
 VERBOSE = bool(os.getenv(f'{APP_ENV}_VERBOSE', ''))
 QUIET = False
 STRICT = bool(os.getenv(f'{APP_ENV}_STRICT', ''))
+
+BASE_URL = 'https://master.qt.io/'
+DASH = '-'
+EASING = 3
+NL = '\n'
+SP = ' '
+ESP = '\\' + SP
+URL_ENC_SP = '%20'
+RATE = 2_000_000
+ENCODING = 'utf-8'
+TS_FORMAT = '%Y-%m-%d %H:%M:%S +00:00'
+HTTP_404_FILE = """\
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+</body></html>
+"""
+HTTP_404_SIZE_BYTES = 196
+HTTP_404_BYTES_TOKEN = b'<!DOCTYPE'
+HTTP_404_BYTES_TOKEN_LENGTH = len(HTTP_404_BYTES_TOKEN)
+
 ENCODING = 'utf-8'
 ENCODING_ERRORS_POLICY = 'ignore'
 DEFAULT_CONFIG_NAME = '.kiertotie.json'
@@ -32,8 +56,25 @@ LOG_LEVEL = logging.INFO
 TS_FORMAT_LOG = '%Y-%m-%dT%H:%M:%S'
 TS_FORMAT_PAYLOADS = '%Y-%m-%d %H:%M:%S.%f UTC'
 
+EntryType = dict[str, int | str]
+ProxyType = dict[str, int | dict[str, list[EntryType]]]
+
 __all__: List[str] = [
+    'BASE_URL',
+    'DASH',
+    'EASING',
+    'RATE',
     'ENCODING',
+    'NL',
+    'SP',
+    'ESP',
+    'URL_ENC_SP',
+    'TS_FORMAT',
+    'HTTP_404_FILE',
+    'HTTP_404_SIZE_BYTES',
+    'HTTP_404_BYTES_TOKEN',
+    'HTTP_404_BYTES_TOKEN_LENGTH',
+    'ProxyType',
     'log',
 ]
 
