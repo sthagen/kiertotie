@@ -50,7 +50,7 @@ for n, entry in enumerate(repo['tree']['files'], start=1):
     secs_est = int(size_bytes / RATE)
     secs_est_disp = 'less than a second' if secs_est < 1 else f'approx. {secs_est} seconds'
     bytes_cum += size_bytes
-    nap = random.randint(1, EASING)
+    nap = random.randint(1, EASING)  # nosec B311
     ACTIONS.append(f'echo sleeping for {nap} secs before transfering file {n} of {transfers}')
     ACTIONS.append(f'sleep {nap}')
     ACTIONS.append(f'cd {anchor}/{root_folder}/{path.parent} || exit 1')

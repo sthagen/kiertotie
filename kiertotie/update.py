@@ -202,7 +202,7 @@ def process(
         secs_est = int(size_bytes_upstream / RATE)
         secs_est_disp = 'less than a second' if secs_est < 1 else f'approx. {secs_est} seconds'
         bytes_cum += size_bytes_upstream
-        nap = random.randint(1, EASING)
+        nap = random.randint(1, EASING)  # nosec B311
         actions.append(f'echo sleeping for {nap} secs before transfering file {n} of {transfers}')
         actions.append(f'sleep {nap}')
         actions.append(f'mkdir -p "{anchor}/{root_folder}/{path.parent}" || exit 1')
