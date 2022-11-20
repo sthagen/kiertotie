@@ -14,40 +14,33 @@ def parse_request(argv: List[str]) -> Union[int, argparse.Namespace]:
         prog=APP_ALIAS, description=APP_NAME, formatter_class=argparse.RawTextHelpFormatter
     )
     parser.add_argument(
-        '--facet',
-        '-f',
-        dest='facet',
-        required=True,
-        help='facet key of target document',
-    )
-    parser.add_argument(
-        '--target',
-        '-t',
-        dest='target',
-        required=True,
-        help='target document key',
-    )
-    parser.add_argument(
-        '--document-root',
-        '-d',
-        dest='doc_root',
-        default='',
-        help='Root of the document tree to visit. Optional\n(default: positional tree root value)',
+        '--proxy',
+        '-p',
+        dest='proxy',
         required=False,
+        help='proxy data path',
     )
     parser.add_argument(
-        'doc_root_pos',
+        'proxy_pos',
         nargs='?',
         default='',
-        help='Root of the document tree to visit. Optional\n(default: empty for PWD)',
+        help='proxy data path',
     )
     parser.add_argument(
-        '--verbose',
-        '-v',
-        dest='verbose',
-        default=False,
-        action='store_true',
-        help='work logging more information along the way\n(default: False)',
+        '--updater',
+        '-u',
+        dest='update_path',
+        required=False,
+        default=None,
+        help='update shell script path to write',
+    )
+    parser.add_argument(
+        '--anchor',
+        '-a',
+        dest='anchor_path',
+        required=False,
+        default=None,
+        help='absolute anchor path (webroot) below which we mirror',
     )
     if not argv:
         parser.print_help()
@@ -55,19 +48,19 @@ def parse_request(argv: List[str]) -> Union[int, argparse.Namespace]:
 
     options = parser.parse_args(argv)
 
-    if not options.doc_root:
-        if options.doc_root_pos:
-            options.doc_root = options.doc_root_pos
+    if not options.proxy:
+        if options.proxy_pos:
+            options.proxy = options.proxy_pos
         else:
-            options.doc_root = str(pathlib.Path.cwd())
+            options.proxy = str(pathlib.Path.cwd())
 
-    doc_root = pathlib.Path(options.doc_root)
-    if doc_root.exists():
-        if doc_root.is_dir():
+    proxy = pathlib.Path(options.proxy)
+    if proxy.exists():
+        if proxy.is_file():
             return options
-        parser.error(f'requested tree root at ({doc_root}) is not a folder')
+        parser.error(f'requested proxy data path ({proxy}) is no file')
 
-    parser.error(f'requested tree root at ({doc_root}) does not exist')
+    parser.error(f'requested proxy data path ({proxy}) does not exist')
 
 
 def main(argv: Union[List[str], None] = None) -> int:
