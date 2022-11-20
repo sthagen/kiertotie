@@ -7,8 +7,8 @@ import pathlib
 from typing import List, no_type_check
 
 # [[[fill git_describe()]]]
-__version__ = '2022.11.3+parent.776c021b'
-# [[[end]]] (checksum: 652504b4409eb2fb0fd96d4e99e9bb19)
+__version__ = '2022.11.20+parent.0984cbb4'
+# [[[end]]] (checksum: bf15c01a0f7902b355978ae451ea1121)
 __version_info__ = tuple(
     e if '-' not in e else e.split('-')[0] for part in __version__.split('+') for e in part.split('.') if e != 'parent'
 )
