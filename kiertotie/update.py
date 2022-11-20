@@ -81,7 +81,8 @@ def assess_files(
                 text_content = text_reader.read()
             if text_content == HTTP_404_FILE:
                 log.warning(
-                    f'detected HTTP/404 response file ({root_folder / path}) in local hierarchy will be removed'
+                    f'detected HTTP/404 response file ({root_folder / path})'
+                    ' in local hierarchy and added removal command'
                 )
                 commands.append(f'echo Removing HTTP/404 response file {root_folder / path} from local hierarchy:')
                 commands.append(f'rm -f {anchor / root_folder / path}')
