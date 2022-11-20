@@ -1,14 +1,13 @@
 import argparse
-import gettext
 import logging
 
 import kiertotie.tree as tree
 import kiertotie.update as update
 from kiertotie import log
 
-lang = gettext.translation('messages', localedir='locale', languages=['de_DE'])
-lang.install()
-_ = lang.gettext  # German
+# lang = gettext.translation('messages', localedir='locale', languages=['de_DE'])
+# lang.install()
+# _ = lang.gettext  # German
 
 
 def verify(options: argparse.Namespace) -> int:
@@ -33,5 +32,5 @@ def verify(options: argparse.Namespace) -> int:
             script_path=options.update_path,
             verbose=verbose,
         )
-    log.error(_('YES'))
+    log.error('The app did not understand what to do')  # _('YES'))
     return 2
