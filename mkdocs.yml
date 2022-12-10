@@ -3,6 +3,8 @@ site_description: "Detour (Finnish: kiertotie) per rsync proxy to https mirror n
 
 theme:
   name: 'material'
+  logo: assets/logo.png
+  favicon: images/favicon.ico
   features:
     - navigation.expand
     - toc.integrate
