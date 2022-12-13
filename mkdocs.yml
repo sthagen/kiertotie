@@ -1,4 +1,4 @@
-site_name: kiertotie
+site_name: Kiertotie
 site_description: "Detour (Finnish: kiertotie) per rsync proxy to https mirror node."
 
 theme:
