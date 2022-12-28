@@ -8,7 +8,7 @@
             {
                 "key": "pytz",
                 "package_name": "pytz",
-                "installed_version": "2022.6",
+                "installed_version": "2022.7",
                 "required_version": ">=2015.7",
                 "dependencies": []
             }

@@ -5,5 +5,5 @@ digraph {
 	pyyaml [label="PyYAML\n6.0"]
 	babel [label="Babel\n2.11.0"]
 	babel -> pytz [label=">=2015.7"]
-	pytz [label="pytz\n2022.6"]
+	pytz [label="pytz\n2022.7"]
 }

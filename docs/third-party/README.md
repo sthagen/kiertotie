@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://github.com/sthagen/pilli/blob/default/sbom.json) with SHA256 checksum ([8cd4d125 ...](https://raw.githubusercontent.com/sthagen/pilli/default/sbom.json.sha256 "sha256:8cd4d1250a75b8fc3894cf9d1997f0304acbc0c2fbaf13d2b7f7dad37c570f46")).
-<!--[[[end]]] (checksum: 2270b0526c54cedcca3224ae91a3f471)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/kiertotie/blob/default/sbom.json) with SHA256 checksum ([760c8a08 ...](https://git.sr.ht/~sthagen/kiertotie/blob/default/sbom.json.sha256 "sha256:760c8a08f0360a21352a63701fa9bc453dbeae488af2f7068dcaca5e89c66421")).
+<!--[[[end]]] (checksum: f30cdc39c5f66abaf8cf9ea561744a73)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -40,9 +40,9 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 <!--[[[fill dependency_tree_console_text()]]]-->
 ````console
 Babel==2.11.0
-  - pytz [required: >=2015.7, installed: 2022.6]
+  - pytz [required: >=2015.7, installed: 2022.7]
 PyYAML==6.0
 typer==0.7.0
   - click [required: >=7.1.1,<9.0.0, installed: 8.1.3]
 ````
-<!--[[[end]]] (checksum: 2c1e5bad502cf86714b4545b27c2ebca)-->
+<!--[[[end]]] (checksum: 4c0199d74efc4bd15de1857b44428067)-->
