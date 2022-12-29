@@ -1,9 +1,9 @@
 .DEFAULT_GOAL := all
-isort = isort kiertotie test
 black = black -S -l 120 --target-version py311 kiertotie test
-flake8 = flake8 --ignore E203 kiertotie test
+lint = ruff kiertotie test
 pytest = pytest --asyncio-mode=strict --cov=kiertotie --cov-report term-missing:skip-covered --cov-branch --log-format="%(levelname)s %(message)s"
 types = mypy kiertotie
+
 .PHONY: install
 install:
 	pip install -U pip wheel
@@ -21,14 +21,13 @@ init:
 
 .PHONY: format
 format:
-	$(isort)
+	$(lint) --fix
 	$(black)
 
 .PHONY: lint
 lint:
 	python setup.py check -ms
-	$(flake8)
-	$(isort) --check-only --df
+	$(lint) --diff
 	$(black) --check --diff
 
 .PHONY: types
