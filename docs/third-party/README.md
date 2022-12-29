@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/kiertotie/blob/default/sbom.json) with SHA256 checksum ([760c8a08 ...](https://git.sr.ht/~sthagen/kiertotie/blob/default/sbom.json.sha256 "sha256:760c8a08f0360a21352a63701fa9bc453dbeae488af2f7068dcaca5e89c66421")).
-<!--[[[end]]] (checksum: f30cdc39c5f66abaf8cf9ea561744a73)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/kiertotie/blob/default/sbom.json) with SHA256 checksum ([614e73d8 ...](https://git.sr.ht/~sthagen/kiertotie/blob/default/sbom.json.sha256 "sha256:614e73d8ef583a25559127bbac4aab7974dd0f2b2120aa346195c646828b70fe")).
+<!--[[[end]]] (checksum: ee184c163c5b2ed65c1acf3adcbcb6d2)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -20,10 +20,11 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 ### Indirect Dependencies
 
 <!--[[[fill indirect_dependencies_table()]]]-->
-| Name                                          | Version                                        | License     | Author         | Description (from packaging data)         |
-|:----------------------------------------------|:-----------------------------------------------|:------------|:---------------|:------------------------------------------|
-| [click](https://palletsprojects.com/p/click/) | [8.1.3](https://pypi.org/project/click/8.1.3/) | BSD License | Armin Ronacher | Composable command line interface toolkit |
-<!--[[[end]]] (checksum: dc3a866a7aa3332404bde3da87727cb9)-->
+| Name                                          | Version                                         | License     | Author         | Description (from packaging data)                 |
+|:----------------------------------------------|:------------------------------------------------|:------------|:---------------|:--------------------------------------------------|
+| [click](https://palletsprojects.com/p/click/) | [8.1.3](https://pypi.org/project/click/8.1.3/)  | BSD License | Armin Ronacher | Composable command line interface toolkit         |
+| [pytz](http://pythonhosted.org/pytz)          | [2022.7](https://pypi.org/project/pytz/2022.7/) | MIT License | Stuart Bishop  | World timezone definitions, modern and historical |
+<!--[[[end]]] (checksum: 2c34b77f1e6b53373df0b3208fb6d51b)-->
 
 ## Dependency Tree(s)
 
