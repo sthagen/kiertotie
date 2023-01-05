@@ -198,13 +198,17 @@ def process(
         if entry_path == '.':
             continue
         path = pathlib.Path(str(entry_path))
+        path_str = str(path)
         size_bytes_upstream = int(entry['size'])
         secs_est = int(size_bytes_upstream / RATE)
         secs_est_disp = 'less than a second' if secs_est < 1 else f'approx. {secs_est} seconds'
         bytes_cum += size_bytes_upstream
         nap = random.randint(1, EASING)  # nosec B311
-        actions.append(f'echo sleeping for {nap} secs before transfering file {n} of {transfers}')
-        actions.append(f'sleep {nap}')
+        if 'timestamp' in path_str or 'md5sum' in path_str:
+            actions.append(f'echo not sleeping before transferring file {n} of {transfers}')
+        else:
+            actions.append(f'echo sleeping for {nap} secs before transferring file {n} of {transfers}')
+            actions.append(f'sleep {nap}')
         actions.append(f'mkdir -p "{anchor}/{root_folder}/{path.parent}" || exit 1')
         actions.append(f'cd "{anchor}/{root_folder}/{path.parent}" || exit 1')
         actions.append('pwd')
@@ -212,11 +216,11 @@ def process(
             f'echo started the transfer {n} of {transfers} requesting {size_bytes_upstream} bytes'
             f' assuming {secs_est_disp} at "$(date +"%Y-%m-%d %H:%M:%S +00:00")"'
         )
-        if SP not in str(path):
+        if SP not in path_str:
             actions.append(f"echo curl -kORLs --limit-rate 2000k '{BASE_URL}{root_folder}/{path}'")
             actions.append(f"curl -kORLs --limit-rate 2000k '{BASE_URL}{root_folder}/{path}'")
         else:
-            path_url_enc = str(path).replace(SP, URL_ENC_SP)
+            path_url_enc = path_str.replace(SP, URL_ENC_SP)
             path_local = f'{str(path.name).replace(SP, ESP)}'
             actions.append(
                 f"echo curl -kRLs --limit-rate 2000k '{BASE_URL}{root_folder}/{path_url_enc}' -o '{path_local}'"
