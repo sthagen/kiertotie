@@ -15,15 +15,15 @@ install:
 install-all: install
 	pip install -r test/requirements-dev.txt
 
-.PHONY: init
-init:
-	pip install -r test/requirements.txt
-	pip install -r test/requirements-dev.txt
-
 .PHONY: format
 format:
 	$(lint) --fix
 	$(black)
+
+.PHONY: init
+init:
+	pip install -r test/requirements.txt
+	pip install -r test/requirements-dev.txt
 
 .PHONY: lint
 lint:
