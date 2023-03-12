@@ -14,7 +14,7 @@ Third party dependencies are documented in the folder [third-party](third-party/
 
 ## Bug Tracker
 
-Feature requests and bug reports are best entered in the [todos of kiertotie](https://todo.sr.ht/~sthagen/kiertotie).
+Any feature requests or bug reports shall go to the [todos of kiertotie](https://todo.sr.ht/~sthagen/kiertotie).
 
 ## Primary Source repository
 
@@ -26,3 +26,10 @@ The preferred public clones of `kiertotie` are:
 
 * [on codeberg](https://codeberg.org/sthagen/kiertotie) - a democratic community-driven, non-profit software development platform operated by Codeberg e.V.
 * [at sourcehut](https://git.sr.ht/~sthagen/kiertotie) - a collection of tools useful for software development.
+
+## Contributions
+
+Please do not submit "pull requests" (I found no way to disable that "feature" on GitHub).
+If you like to share small changes under the repositories license please kindly do so by sending a patch set.
+You can either send such a patchset per email using [git send-email](https://git-send-email.io) or 
+if you are a sourcehut user by pointing your browser to [Prepare a patchset](https://git.sr.ht/~sthagen/kiertotie/send-email).
