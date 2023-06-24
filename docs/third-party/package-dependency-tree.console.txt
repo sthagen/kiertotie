@@ -1,5 +1,4 @@
-Babel==2.11.0
-  - pytz [required: >=2015.7, installed: 2022.7]
+Babel==2.12.1
 PyYAML==6.0
 typer==0.7.0
-  - click [required: >=7.1.1,<9.0.0, installed: 8.1.3]
+└── click [required: >=7.1.1,<9.0.0, installed: 8.1.3]

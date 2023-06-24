@@ -2,17 +2,9 @@
     {
         "key": "babel",
         "package_name": "Babel",
-        "installed_version": "2.11.0",
-        "required_version": "2.11.0",
-        "dependencies": [
-            {
-                "key": "pytz",
-                "package_name": "pytz",
-                "installed_version": "2022.7",
-                "required_version": ">=2015.7",
-                "dependencies": []
-            }
-        ]
+        "installed_version": "2.12.1",
+        "required_version": "2.12.1",
+        "dependencies": []
     },
     {
         "key": "pyyaml",
