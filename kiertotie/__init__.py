@@ -13,13 +13,16 @@ __version_info__ = tuple(
     e if '-' not in e else e.split('-')[0] for part in __version__.split('+') for e in part.split('.') if e != 'parent'
 )
 
-APP_NAME = 'Detour (Finnish: kiertotie) per rsync proxy to https mirror node.'
-APP_ALIAS = 'kiertotie'
-APP_ENV = 'KIERTOTIE'
+APP_ALIAS = str(pathlib.Path(__file__).parent.name)
+APP_ENV = APP_ALIAS.upper()
+APP_NAME = locals()['__doc__']
 DEBUG = bool(os.getenv(f'{APP_ENV}_DEBUG', ''))
 VERBOSE = bool(os.getenv(f'{APP_ENV}_VERBOSE', ''))
 QUIET = False
 STRICT = bool(os.getenv(f'{APP_ENV}_STRICT', ''))
+ENCODING = 'utf-8'
+ENCODING_ERRORS_POLICY = 'ignore'
+DEFAULT_CONFIG_NAME = f'.{APP_ALIAS}.json'
 
 BASE_URL = 'https://master.qt.io/'
 DASH = '-'
@@ -29,7 +32,6 @@ SP = ' '
 ESP = '\\' + SP
 URL_ENC_SP = '%20'
 RATE = 2_000_000
-ENCODING = 'utf-8'
 TS_FORMAT = '%Y-%m-%d %H:%M:%S +00:00'
 HTTP_404_FILE = """\
 <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
@@ -44,9 +46,6 @@ HTTP_404_SIZE_BYTES = 196
 HTTP_404_BYTES_TOKEN = b'<!DOCTYPE'
 HTTP_404_BYTES_TOKEN_LENGTH = len(HTTP_404_BYTES_TOKEN)
 
-ENCODING = 'utf-8'
-ENCODING_ERRORS_POLICY = 'ignore'
-DEFAULT_CONFIG_NAME = '.kiertotie.json'
 DEFAULT_LF_ONLY = 'YES'
 log = logging.getLogger()  # Module level logger is sufficient
 LOG_FOLDER = pathlib.Path('logs')
