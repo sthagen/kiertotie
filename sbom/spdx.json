@@ -3,44 +3,23 @@
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
     "comment" : "Converted from CycloneDX spec version 1.4",
-    "created" : "2023-07-17T18:00:03Z",
+    "created" : "2023-07-17T18:05:27Z",
     "creators" : [ "Tool: CycloneDX:cyclonedx-bom-3.11.2", "Tool: CycloneDX:cyclonedx-python-lib-3.1.5", "Tool: CycloneToSpdx-0.1.4" ],
     "licenseListVersion" : "3.21"
   },
   "name" : "From-Cyclone-DX",
   "dataLicense" : "CC0-1.0",
   "annotations" : [ {
-    "annotationDate" : "2023-07-17T18:00:04Z",
+    "annotationDate" : "2023-07-17T18:05:28Z",
     "annotationType" : "OTHER",
     "annotator" : "Tool: CycloneToSpdx",
     "comment" : "MISSING_CDX_PROPERTY:extensions={}"
   } ],
-  "documentNamespace" : "https://cyclonedx/694e78f2-82f8-41cd-91a0-68b20e873ad1_1",
+  "documentNamespace" : "https://cyclonedx/45e4fe7c-6f35-4d6c-bc33-2ba01774e76b_1",
   "packages" : [ {
-    "SPDXID" : "SPDXRef-d5832ec8-ec49-4cb4-981e-7a7352920950",
+    "SPDXID" : "SPDXRef-79bd242d-6eee-49b6-aac0-1cbe15c6280e",
     "annotations" : [ {
-      "annotationDate" : "2023-07-17T18:00:04Z",
-      "annotationType" : "OTHER",
-      "annotator" : "Tool: CycloneToSpdx",
-      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
-    } ],
-    "copyrightText" : "NOASSERTION",
-    "downloadLocation" : "NOASSERTION",
-    "externalRefs" : [ {
-      "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:pypi/babel@2.12.1",
-      "referenceType" : "purl"
-    } ],
-    "filesAnalyzed" : false,
-    "licenseConcluded" : "NOASSERTION",
-    "licenseDeclared" : "NOASSERTION",
-    "name" : "Babel",
-    "primaryPackagePurpose" : "LIBRARY",
-    "versionInfo" : "2.12.1"
-  }, {
-    "SPDXID" : "SPDXRef-8606d529-bd22-4fd9-8d62-593b825027dc",
-    "annotations" : [ {
-      "annotationDate" : "2023-07-17T18:00:04Z",
+      "annotationDate" : "2023-07-17T18:05:28Z",
       "annotationType" : "OTHER",
       "annotator" : "Tool: CycloneToSpdx",
       "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
@@ -59,9 +38,30 @@
     "primaryPackagePurpose" : "LIBRARY",
     "versionInfo" : "6.0"
   }, {
-    "SPDXID" : "SPDXRef-bfee60e4-fe9d-422e-b955-f5226b95f559",
+    "SPDXID" : "SPDXRef-22321ee9-b2e4-415d-9e56-dd5bece1df8a",
     "annotations" : [ {
-      "annotationDate" : "2023-07-17T18:00:04Z",
+      "annotationDate" : "2023-07-17T18:05:28Z",
+      "annotationType" : "OTHER",
+      "annotator" : "Tool: CycloneToSpdx",
+      "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
+    } ],
+    "copyrightText" : "NOASSERTION",
+    "downloadLocation" : "NOASSERTION",
+    "externalRefs" : [ {
+      "referenceCategory" : "PACKAGE-MANAGER",
+      "referenceLocator" : "pkg:pypi/babel@2.12.1",
+      "referenceType" : "purl"
+    } ],
+    "filesAnalyzed" : false,
+    "licenseConcluded" : "NOASSERTION",
+    "licenseDeclared" : "NOASSERTION",
+    "name" : "Babel",
+    "primaryPackagePurpose" : "LIBRARY",
+    "versionInfo" : "2.12.1"
+  }, {
+    "SPDXID" : "SPDXRef-35d01fbe-9e51-44c2-8070-33e558452d1a",
+    "annotations" : [ {
+      "annotationDate" : "2023-07-17T18:05:28Z",
       "annotationType" : "OTHER",
       "annotator" : "Tool: CycloneToSpdx",
       "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
@@ -83,14 +83,14 @@
   "relationships" : [ {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-d5832ec8-ec49-4cb4-981e-7a7352920950"
+    "relatedSpdxElement" : "SPDXRef-22321ee9-b2e4-415d-9e56-dd5bece1df8a"
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-bfee60e4-fe9d-422e-b955-f5226b95f559"
+    "relatedSpdxElement" : "SPDXRef-35d01fbe-9e51-44c2-8070-33e558452d1a"
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-8606d529-bd22-4fd9-8d62-593b825027dc"
+    "relatedSpdxElement" : "SPDXRef-79bd242d-6eee-49b6-aac0-1cbe15c6280e"
   } ]
 }
