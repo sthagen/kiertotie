@@ -3,13 +3,14 @@
 import datetime as dti
 import os
 import pathlib
+from typing import Union
 
 from kiertotie import DASH, TS_FORMAT, load, log
 
 
 def span(
-    proxy_data_path: str | pathlib.Path,
-    anchor_path: str | pathlib.Path | None = None,
+    proxy_data_path: Union[str, pathlib.Path],
+    anchor_path: Union[str, pathlib.Path, None] = None,
     verbose: bool = False,
 ) -> int:
     """Span the folder tree per proxy folder data."""

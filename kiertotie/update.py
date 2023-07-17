@@ -2,6 +2,7 @@
 import datetime as dti
 import pathlib
 import random
+from typing import Union
 
 from kiertotie import (
     BASE_URL,
@@ -26,7 +27,7 @@ from kiertotie import (
 DEFAULT_SCRIPT = 'update.sh'
 
 
-def shell(path: str | pathlib.Path, commands: list[str]) -> None:
+def shell(path: Union[str, pathlib.Path], commands: list[str]) -> None:
     """Dump the commands into a shell script at path."""
     with open(path, 'wt', encoding=ENCODING) as handle:
         handle.write(NL.join(commands))
@@ -113,9 +114,9 @@ def assess_files(
 
 
 def process(
-    proxy_data_path: str | pathlib.Path,
-    anchor_path: str | pathlib.Path | None = None,
-    script_path: str | pathlib.Path | None = None,
+    proxy_data_path: Union[str, pathlib.Path],
+    anchor_path: Union[str, pathlib.Path, None] = None,
+    script_path: Union[str, pathlib.Path, None] = None,
     verbose: bool = False,
 ) -> int:
     """Generate folder tree below current working directory according to proxy data."""

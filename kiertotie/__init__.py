@@ -4,7 +4,7 @@ import json
 import logging
 import os
 import pathlib
-from typing import List, no_type_check
+from typing import List, Union, no_type_check
 
 # [[[fill git_describe()]]]
 __version__ = '2023.1.5+parent.ccac1ba7'
@@ -56,9 +56,9 @@ LOG_LEVEL = logging.INFO
 TS_FORMAT_LOG = '%Y-%m-%dT%H:%M:%S'
 TS_FORMAT_PAYLOADS = '%Y-%m-%d %H:%M:%S.%f UTC'
 
-EntryType = dict[str, int | str]
+EntryType = dict[str, Union[int, str]]
 DimensionType = dict[str, list[EntryType]]
-ProxyType = dict[str, int | DimensionType]
+ProxyType = dict[str, Union[int, DimensionType]]
 
 __all__: List[str] = [
     'BASE_URL',
@@ -104,7 +104,7 @@ def init_logger(name=None, level=None):
     log.propagate = True
 
 
-def load(data_path: str | pathlib.Path) -> ProxyType:
+def load(data_path: Union[str, pathlib.Path]) -> ProxyType:
     """Load the data from JSON."""
     with open(data_path, 'rt', encoding=ENCODING) as handle:
         data: ProxyType = json.load(handle)
