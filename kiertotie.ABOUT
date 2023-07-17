@@ -1,0 +1,14 @@
+name: kiertotie
+description: Detour (Finnish: kiertotie) per rsync proxy to https mirror node.
+license_spdx: MIT
+version: 2023.1.5
+spec_version: 1.0
+home_url: https://git.sr.ht/~sthagen/kiertotie
+news_url: https://libraries.io/pypi/kiertotie/versions.atom
+date: 2023-01-05
+about_resource: ./
+libraries_io_url: https://libraries.io/pypi/kiertotie?number=2023.1.5
+vcs_tool: git
+vcs_repository: https://git.sr.ht/~sthagen/kiertotie
+vcs_branch: default
+
