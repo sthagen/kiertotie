@@ -20,7 +20,7 @@
 <title>pyyaml</title>
 <ellipse fill="none" stroke="black" cx="138.71" cy="-127.68" rx="48.97" ry="25.81"/>
 <text text-anchor="middle" x="138.71" y="-128.63" font-family="Times,serif" font-size="14.00">PyYAML</text>
-<text text-anchor="middle" x="138.71" y="-114.38" font-family="Times,serif" font-size="14.00">6.0</text>
+<text text-anchor="middle" x="138.71" y="-114.38" font-family="Times,serif" font-size="14.00">6.0.1</text>
 </g>
 <!-- typer -->
 <g id="node3" class="node">
