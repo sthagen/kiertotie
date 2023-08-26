@@ -7,7 +7,7 @@ Detour (Finnish: kiertotie) per rsync proxy to https mirror node.
 Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/kiertotie.svg?style=flat)](https://pypi.python.org/pypi/kiertotie/)
-[![downloads](https://pepy.tech/badge/kiertotie/month)](https://pepy.tech/project/kiertotie)
+[![downloads](https://static.pepy.tech/badge/kiertotie/month)](https://pepy.tech/project/kiertotie)
 [![wheel](https://img.shields.io/pypi/wheel/kiertotie.svg?style=flat)](https://pypi.python.org/pypi/kiertotie/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/kiertotie.svg?style=flat)](https://pypi.python.org/pypi/kiertotie/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/kiertotie.svg?style=flat)](https://pypi.python.org/pypi/kiertotie/)
