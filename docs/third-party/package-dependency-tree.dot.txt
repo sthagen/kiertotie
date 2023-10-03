@@ -1,6 +1,6 @@
 digraph {
 	"typing-extensions" [label="typing-extensions\n4.7.1"]
-	babel [label="Babel\n2.12.1"]
+	babel [label="Babel\n2.13.0"]
 	click [label="click\n8.1.5"]
 	pyyaml [label="PyYAML\n6.0.1"]
 	typer -> "typing-extensions" [label=">=3.7.4.3"]
