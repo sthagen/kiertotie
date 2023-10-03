@@ -3,23 +3,23 @@
   "spdxVersion" : "SPDX-2.3",
   "creationInfo" : {
     "comment" : "Converted from CycloneDX spec version 1.4",
-    "created" : "2023-08-22T19:23:58Z",
+    "created" : "2023-10-03T16:12:36Z",
     "creators" : [ "Tool: CycloneDX:cyclonedx-bom-3.11.2", "Tool: CycloneDX:cyclonedx-python-lib-3.1.5", "Tool: CycloneToSpdx-0.1.4" ],
     "licenseListVersion" : "3.21"
   },
   "name" : "From-Cyclone-DX",
   "dataLicense" : "CC0-1.0",
   "annotations" : [ {
-    "annotationDate" : "2023-08-22T19:24:00Z",
+    "annotationDate" : "2023-10-03T16:12:37Z",
     "annotationType" : "OTHER",
     "annotator" : "Tool: CycloneToSpdx",
     "comment" : "MISSING_CDX_PROPERTY:extensions={}"
   } ],
-  "documentNamespace" : "https://cyclonedx/423ddea2-9998-4e8f-8d18-983149bc8b98_1",
+  "documentNamespace" : "https://cyclonedx/d041c918-84dd-4d59-998b-0923fb8b0bd1_1",
   "packages" : [ {
-    "SPDXID" : "SPDXRef-266b9abe-1205-46f8-9432-c89a494c2dfd",
+    "SPDXID" : "SPDXRef-2fc4e125-afa4-4aa6-a9fe-7bda25db31b1",
     "annotations" : [ {
-      "annotationDate" : "2023-08-22T19:24:00Z",
+      "annotationDate" : "2023-10-03T16:12:37Z",
       "annotationType" : "OTHER",
       "annotator" : "Tool: CycloneToSpdx",
       "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
@@ -28,19 +28,19 @@
     "downloadLocation" : "NOASSERTION",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:pypi/pyyaml@6.0.1",
+      "referenceLocator" : "pkg:pypi/babel@2.13.0",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
-    "name" : "PyYAML",
+    "name" : "Babel",
     "primaryPackagePurpose" : "LIBRARY",
-    "versionInfo" : "6.0.1"
+    "versionInfo" : "2.13.0"
   }, {
-    "SPDXID" : "SPDXRef-1cde6616-15ae-4abf-8efd-aabd5830bbc5",
+    "SPDXID" : "SPDXRef-7347763c-aafc-4a5f-adc3-215ba0694274",
     "annotations" : [ {
-      "annotationDate" : "2023-08-22T19:24:00Z",
+      "annotationDate" : "2023-10-03T16:12:37Z",
       "annotationType" : "OTHER",
       "annotator" : "Tool: CycloneToSpdx",
       "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
@@ -59,9 +59,9 @@
     "primaryPackagePurpose" : "LIBRARY",
     "versionInfo" : "0.9.0"
   }, {
-    "SPDXID" : "SPDXRef-b4aaf190-b8ca-4910-9f90-e0a9506e1622",
+    "SPDXID" : "SPDXRef-b96eb7e3-f491-43f7-9010-f12d0c9cb626",
     "annotations" : [ {
-      "annotationDate" : "2023-08-22T19:24:00Z",
+      "annotationDate" : "2023-10-03T16:12:37Z",
       "annotationType" : "OTHER",
       "annotator" : "Tool: CycloneToSpdx",
       "comment" : "MISSING_CDX_PROPERTY:componentType=\"LIBRARY\""
@@ -70,27 +70,27 @@
     "downloadLocation" : "NOASSERTION",
     "externalRefs" : [ {
       "referenceCategory" : "PACKAGE-MANAGER",
-      "referenceLocator" : "pkg:pypi/babel@2.12.1",
+      "referenceLocator" : "pkg:pypi/pyyaml@6.0.1",
       "referenceType" : "purl"
     } ],
     "filesAnalyzed" : false,
     "licenseConcluded" : "NOASSERTION",
     "licenseDeclared" : "NOASSERTION",
-    "name" : "Babel",
+    "name" : "PyYAML",
     "primaryPackagePurpose" : "LIBRARY",
-    "versionInfo" : "2.12.1"
+    "versionInfo" : "6.0.1"
   } ],
   "relationships" : [ {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-b4aaf190-b8ca-4910-9f90-e0a9506e1622"
+    "relatedSpdxElement" : "SPDXRef-2fc4e125-afa4-4aa6-a9fe-7bda25db31b1"
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-1cde6616-15ae-4abf-8efd-aabd5830bbc5"
+    "relatedSpdxElement" : "SPDXRef-7347763c-aafc-4a5f-adc3-215ba0694274"
   }, {
     "spdxElementId" : "SPDXRef-DOCUMENT",
     "relationshipType" : "DESCRIBES",
-    "relatedSpdxElement" : "SPDXRef-266b9abe-1205-46f8-9432-c89a494c2dfd"
+    "relatedSpdxElement" : "SPDXRef-b96eb7e3-f491-43f7-9010-f12d0c9cb626"
   } ]
 }
