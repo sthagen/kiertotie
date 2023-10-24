@@ -20,7 +20,7 @@ classifiers = [
 ]
 keywords = ["developer-tools", "validation", "verification"]
 dependencies = [
-    "Babel >= 2.13.0",
+    "Babel >= 2.13.1",
     "PyYAML >= 6.0.1",
     "typer >= 0.9.0",
 ]
