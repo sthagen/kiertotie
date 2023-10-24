@@ -1,8 +1,8 @@
 # Third Party Dependencies
 
 <!--[[[fill sbom_sha256()]]]-->
-The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/kiertotie/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([ea3df35d ...](https://git.sr.ht/~sthagen/kiertotie/blob/default/etc/sbom/cdx.json.sha256 "sha256:ea3df35dfbe495e8acc48275cd87655f177590ad742294fec23d555e8dabf977")).
-<!--[[[end]]] (checksum: e5f4577290caa62799e6d3a2c9db49b6)-->
+The [SBOM in CycloneDX v1.4 JSON format](https://git.sr.ht/~sthagen/kiertotie/blob/default/etc/sbom/cdx.json) with SHA256 checksum ([37c211c3 ...](https://git.sr.ht/~sthagen/kiertotie/blob/default/etc/sbom/cdx.json.sha256 "sha256:37c211c3ecd45a2d2b94bfdc41ed9924fd988a364d4c16e10d62dfc198b387d4")).
+<!--[[[end]]] (checksum: e68e9dfc330b67fb4744288b403fd494)-->
 ## Licenses 
 
 JSON files with complete license info of: [direct dependencies](direct-dependency-licenses.json) | [all dependencies](all-dependency-licenses.json)
@@ -12,10 +12,10 @@ JSON files with complete license info of: [direct dependencies](direct-dependenc
 <!--[[[fill direct_dependencies_table()]]]-->
 | Name                                       | Version                                          | License     | Author            | Description (from packaging data)                                  |
 |:-------------------------------------------|:-------------------------------------------------|:------------|:------------------|:-------------------------------------------------------------------|
-| [Babel](https://babel.pocoo.org/)          | [2.13.0](https://pypi.org/project/Babel/2.13.0/) | BSD License | Armin Ronacher    | Internationalization utilities                                     |
+| [Babel](https://babel.pocoo.org/)          | [2.13.1](https://pypi.org/project/Babel/2.13.1/) | BSD License | Armin Ronacher    | Internationalization utilities                                     |
 | [PyYAML](https://pyyaml.org/)              | [6.0.1](https://pypi.org/project/PyYAML/6.0.1/)  | MIT License | Kirill Simonov    | YAML parser and emitter for Python                                 |
 | [typer](https://github.com/tiangolo/typer) | [0.9.0](https://pypi.org/project/typer/0.9.0/)   | MIT License | Sebastián Ramírez | Typer, build great CLIs. Easy to code. Based on Python type hints. |
-<!--[[[end]]] (checksum: 00b93a332c0ba39a1bbdba4152a7cab0)-->
+<!--[[[end]]] (checksum: 1f8d8fb474ba7a71a5128b5cb7be1426)-->
 
 ### Indirect Dependencies
 
@@ -40,10 +40,10 @@ Base graphviz file in dot format: [Trees of the direct dependencies](package-dep
 
 <!--[[[fill dependency_tree_console_text()]]]-->
 ````console
-Babel==2.13.0
+Babel==2.13.1
 PyYAML==6.0.1
 typer==0.9.0
 ├── click [required: >=7.1.1,<9.0.0, installed: 8.1.5]
 └── typing-extensions [required: >=3.7.4.3, installed: 4.7.1]
 ````
-<!--[[[end]]] (checksum: 4f39ac5bd0ef85f87b62e16308901dfe)-->
+<!--[[[end]]] (checksum: fe1220a7684b5ba15e707e16a0a44ef4)-->

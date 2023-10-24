@@ -2,8 +2,8 @@
     {
         "key": "babel",
         "package_name": "Babel",
-        "installed_version": "2.13.0",
-        "required_version": "2.13.0",
+        "installed_version": "2.13.1",
+        "required_version": "2.13.1",
         "dependencies": []
     },
     {
