@@ -8,7 +8,7 @@ Detour (Finnish: kiertotie) per rsync proxy to https mirror node.
 [![Configuration](docs/badges/configuration-sbom.svg)](https://git.sr.ht/~sthagen/kiertotie/tree/default/item/docs/third-party/README.md)
 
 [![Version](https://img.shields.io/pypi/v/kiertotie.svg?style=flat)](https://pypi.python.org/pypi/kiertotie/)
-[![Downloads](https://static.pepy.tech/badge/kiertotie/month)](https://pepy.tech/project/kiertotie)
+[![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/kiertotie)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/kiertotie.svg?style=flat)](https://pypi.python.org/pypi/kiertotie/)
 [![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/kiertotie/log)
 
