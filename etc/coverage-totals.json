@@ -1,0 +1,14 @@
+{
+  "kiertotie": {
+    "version": "7.3.2",
+    "timestamp": "2023-12-02T15:19:34.782910",
+    "branch_coverage": false,
+    "show_contexts": true,
+    "covered_lines": 0,
+    "num_statements": 344,
+    "percent_covered": 0,
+    "percent_covered_display": "0.00",
+    "missing_lines": 344,
+    "excluded_lines": 1
+  }
+}
