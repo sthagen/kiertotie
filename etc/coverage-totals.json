@@ -1,7 +1,7 @@
 {
   "kiertotie": {
-    "version": "7.3.2",
-    "timestamp": "2023-12-02T15:19:34.782910",
+    "coverage_tool_version": "7.3.2",
+    "timestamp": "2023-12-02 15:55:23 +00:00",
     "branch_coverage": false,
     "show_contexts": true,
     "covered_lines": 0,
@@ -9,6 +9,25 @@
     "percent_covered": 0,
     "percent_covered_display": "0.00",
     "missing_lines": 344,
-    "excluded_lines": 1
+    "excluded_lines": 1,
+    "node_id": "c79891e5-aabf-3a83-95b9-588edcd8327f",
+    "nfiles": 6,
+    "files": [
+      "kiertotie/__init__.py",
+      "kiertotie/cli.py",
+      "kiertotie/dispatch.py",
+      "kiertotie/elif.py",
+      "kiertotie/tree.py",
+      "kiertotie/update.py"
+    ],
+    "blake3": "35e412d458744e5033b7da26a1add45bd2a1d9ab6c04e4b3341267720753425f",
+    "blake2": "b1b30ea8959ba76936115d49265df401b71dbc7b99aa2f1e771d29f21747508bc4e5edf17775539b6133fcacbb297735e94167c9c5df56be796fc79976f7ec7b",
+    "sha512": "cdbc0f4096b3b518298e8cb56d1d8c2584fb61a42b42eba1d3045146750739c21ee5c5fb3b6093b0ce5b627a8277df2f1319ae2abc74ca552d775366a186a5b0",
+    "sha384": "7aedb3d4ddaf631d4fd5034b5597d71203607713f021f821e0b467f499e40bbd037ea261fcd505b40535a4dfa1174e86",
+    "sha256": "e0df88721d48f0697c78bb74b945a9568462f0c50235335d583a17c3ee19f7d5",
+    "sha1": "551fdc7d77c3e83f19a82335940b614ae9fb4aaa",
+    "md5": "f01adf979d4dddc26b0b4df678af31b8",
+    "python_version": "3.10.12",
+    "entropy": 4.967963
   }
 }
