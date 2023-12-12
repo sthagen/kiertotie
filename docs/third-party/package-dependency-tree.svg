@@ -13,7 +13,7 @@
 <title>babel</title>
 <ellipse fill="none" stroke="black" cx="35.71" cy="-139.47" rx="35.71" ry="28.99"/>
 <text text-anchor="middle" x="35.71" y="-142.67" font-family="Times,serif" font-size="14.00">Babel</text>
-<text text-anchor="middle" x="35.71" y="-126.17" font-family="Times,serif" font-size="14.00">2.13.1</text>
+<text text-anchor="middle" x="35.71" y="-126.17" font-family="Times,serif" font-size="14.00">2.14.0</text>
 </g>
 <!-- pyyaml -->
 <g id="node2" class="node">
