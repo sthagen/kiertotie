@@ -28,12 +28,12 @@
     {
       "category": "3.10",
       "date": "2024-01",
-      "downloads": 112
+      "downloads": 116
     },
     {
       "category": "3.11",
       "date": "2023-08",
-      "downloads": 11
+      "downloads": 5
     },
     {
       "category": "3.11",
@@ -58,12 +58,12 @@
     {
       "category": "3.11",
       "date": "2024-01",
-      "downloads": 112
+      "downloads": 116
     },
     {
       "category": "3.12",
       "date": "2024-01",
-      "downloads": 85
+      "downloads": 89
     },
     {
       "category": "3.3",
@@ -78,7 +78,7 @@
     {
       "category": "null",
       "date": "2023-08",
-      "downloads": 22
+      "downloads": 16
     },
     {
       "category": "null",
@@ -103,7 +103,7 @@
     {
       "category": "null",
       "date": "2024-01",
-      "downloads": 21
+      "downloads": 25
     }
   ],
   "package": "kiertotie",
