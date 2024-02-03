@@ -1,4 +1,5 @@
 """Command line interface for detour (Finnish: kiertotie) per rsync proxy to https mirror node.."""
+
 import argparse
 import pathlib
 import sys
