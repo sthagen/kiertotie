@@ -1,25 +1,37 @@
 {
   "total": {
-    "commits": 1766,
+    "commits": 1770,
     "first_committed_at": "2022-11-19T15:04:28+00:00",
-    "last_committed_at": "2024-04-30T21:34:58+00:00",
-    "month_span_day_count": 528,
-    "year_span": 1.4465753424657535,
-    "commits_per_year": 1220,
-    "insertions_per_year": 13399.232954545454,
-    "deletions_per_year": 4642.689393939394,
-    "lines_per_year": 18041.922348484848,
-    "files_per_year": 1454.469696969697,
-    "insertions_count": 19383,
-    "deletions_count": 6716,
-    "lines_count": 26099,
-    "files_count": 2104,
-    "insertions_avg": 10.975651189127973,
-    "deletions_avg": 3.802944507361268,
-    "lines_avg": 14.77859569648924,
-    "files_avg": 1.1913929784824462
+    "last_committed_at": "2024-05-02T16:50:09+00:00",
+    "month_span_day_count": 530,
+    "year_span": 1.452054794520548,
+    "commits_per_year": 1218,
+    "insertions_per_year": 13355.556603773584,
+    "deletions_per_year": 4632.056603773584,
+    "lines_per_year": 17987.61320754717,
+    "files_per_year": 1451.0471698113208,
+    "insertions_count": 19393,
+    "deletions_count": 6726,
+    "lines_count": 26119,
+    "files_count": 2107,
+    "insertions_avg": 10.956497175141243,
+    "deletions_avg": 3.8,
+    "lines_avg": 14.756497175141243,
+    "files_avg": 1.1903954802259886
   },
   "commit_stats": {
+    "2024-05-02T16:50:09+00:00": {
+      "insertions": 1,
+      "deletions": 1,
+      "lines": 2,
+      "files": 1
+    },
+    "2024-05-01T21:28:04+00:00": {
+      "insertions": 9,
+      "deletions": 9,
+      "lines": 18,
+      "files": 2
+    },
     "2024-04-30T21:34:58+00:00": {
       "insertions": 8,
       "deletions": 13,
@@ -12538,6 +12550,20 @@
       "deletions": 14,
       "lines": 23,
       "files": 3
+    },
+    "2024-05-01": {
+      "commits": 1,
+      "insertions": 9,
+      "deletions": 9,
+      "lines": 18,
+      "files": 2
+    },
+    "2024-05-02": {
+      "commits": 1,
+      "insertions": 1,
+      "deletions": 1,
+      "lines": 2,
+      "files": 1
     }
   }
 }
