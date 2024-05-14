@@ -3,7 +3,7 @@
     {
       "category": "3.10",
       "date": "2023-11",
-      "downloads": 68
+      "downloads": 64
     },
     {
       "category": "3.10",
@@ -33,12 +33,12 @@
     {
       "category": "3.10",
       "date": "2024-05",
-      "downloads": 97
+      "downloads": 105
     },
     {
       "category": "3.11",
       "date": "2023-11",
-      "downloads": 68
+      "downloads": 64
     },
     {
       "category": "3.11",
@@ -68,7 +68,7 @@
     {
       "category": "3.11",
       "date": "2024-05",
-      "downloads": 96
+      "downloads": 104
     },
     {
       "category": "3.12",
@@ -93,7 +93,7 @@
     {
       "category": "3.12",
       "date": "2024-05",
-      "downloads": 96
+      "downloads": 104
     },
     {
       "category": "3.3",
@@ -103,7 +103,7 @@
     {
       "category": "null",
       "date": "2023-11",
-      "downloads": 13
+      "downloads": 11
     },
     {
       "category": "null",
@@ -133,7 +133,7 @@
     {
       "category": "null",
       "date": "2024-05",
-      "downloads": 6
+      "downloads": 9
     }
   ],
   "package": "kiertotie",
