@@ -2,13 +2,8 @@
   "data": [
     {
       "category": "3.10",
-      "date": "2024-05",
-      "downloads": 40
-    },
-    {
-      "category": "3.10",
       "date": "2024-06",
-      "downloads": 216
+      "downloads": 168
     },
     {
       "category": "3.10",
@@ -33,17 +28,17 @@
     {
       "category": "3.10",
       "date": "2024-11",
-      "downloads": 188
+      "downloads": 244
     },
     {
-      "category": "3.11",
-      "date": "2024-05",
-      "downloads": 40
+      "category": "3.10",
+      "date": "2024-12",
+      "downloads": 32
     },
     {
       "category": "3.11",
       "date": "2024-06",
-      "downloads": 212
+      "downloads": 164
     },
     {
       "category": "3.11",
@@ -68,17 +63,17 @@
     {
       "category": "3.11",
       "date": "2024-11",
-      "downloads": 184
+      "downloads": 240
     },
     {
-      "category": "3.12",
-      "date": "2024-05",
-      "downloads": 40
+      "category": "3.11",
+      "date": "2024-12",
+      "downloads": 32
     },
     {
       "category": "3.12",
       "date": "2024-06",
-      "downloads": 209
+      "downloads": 161
     },
     {
       "category": "3.12",
@@ -103,17 +98,17 @@
     {
       "category": "3.12",
       "date": "2024-11",
-      "downloads": 186
+      "downloads": 242
+    },
+    {
+      "category": "3.12",
+      "date": "2024-12",
+      "downloads": 32
     },
     {
       "category": "3.9",
       "date": "2024-08",
       "downloads": 6
-    },
-    {
-      "category": "null",
-      "date": "2024-05",
-      "downloads": 8
     },
     {
       "category": "null",
@@ -143,7 +138,12 @@
     {
       "category": "null",
       "date": "2024-11",
-      "downloads": 108
+      "downloads": 111
+    },
+    {
+      "category": "null",
+      "date": "2024-12",
+      "downloads": 1
     }
   ],
   "package": "kiertotie",
