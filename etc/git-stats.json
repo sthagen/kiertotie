@@ -1,25 +1,37 @@
 {
   "total": {
-    "commits": 2787,
+    "commits": 2790,
     "first_committed_at": "2022-11-19T15:04:28+00:00",
-    "last_committed_at": "2024-12-30T17:01:05+00:00",
-    "month_span_day_count": 772,
-    "year_span": 2.115068493150685,
+    "last_committed_at": "2025-01-01T00:45:42+00:00",
+    "month_span_day_count": 773,
+    "year_span": 2.117808219178082,
     "commits_per_year": 1317,
-    "insertions_per_year": 11043.613989637304,
-    "deletions_per_year": 4676.444300518135,
-    "lines_per_year": 15720.058290155439,
-    "files_per_year": 1416.9753886010362,
-    "insertions_count": 23358,
-    "deletions_count": 9891,
-    "lines_count": 33249,
-    "files_count": 2997,
-    "insertions_avg": 8.381054897739505,
-    "deletions_avg": 3.548977395048439,
-    "lines_avg": 11.930032292787944,
-    "files_avg": 1.0753498385360603
+    "insertions_per_year": 11034.993531694698,
+    "deletions_per_year": 4676.060802069858,
+    "lines_per_year": 15711.054333764554,
+    "files_per_year": 1416.5588615782665,
+    "insertions_count": 23370,
+    "deletions_count": 9903,
+    "lines_count": 33273,
+    "files_count": 3000,
+    "insertions_avg": 8.376344086021506,
+    "deletions_avg": 3.5494623655913977,
+    "lines_avg": 11.925806451612903,
+    "files_avg": 1.075268817204301
   },
   "commit_stats": {
+    "2025-01-01T00:45:42+00:00": {
+      "insertions": 1,
+      "deletions": 1,
+      "lines": 2,
+      "files": 1
+    },
+    "2024-12-31T10:19:23+00:00": {
+      "insertions": 11,
+      "deletions": 11,
+      "lines": 22,
+      "files": 2
+    },
     "2024-12-30T17:01:05+00:00": {
       "insertions": 1,
       "deletions": 1,
@@ -18356,6 +18368,20 @@
       "deletions": 46,
       "lines": 110,
       "files": 5
+    },
+    "2024-12-31": {
+      "commits": 1,
+      "insertions": 11,
+      "deletions": 11,
+      "lines": 22,
+      "files": 2
+    },
+    "2025-01-01": {
+      "commits": 1,
+      "insertions": 1,
+      "deletions": 1,
+      "lines": 2,
+      "files": 1
     }
   }
 }
